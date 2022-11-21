@@ -189,14 +189,14 @@
 <div class="modal fade" id="lihat<?=$row['id_surat'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top:-3rem;">
     <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <!-- <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalCenterTitle">
 				Anggota Perjalanan Dinas
                 </h5>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" >
                     <i data-feather="x"></i>
                 </button>
-            </div>
+            </div> -->
             <div class="modal-body">
             <div class="row">
               <div class="col-md-4 grid-margin stretch-card">
@@ -233,45 +233,122 @@
                       <p class="text-muted mb-1">Your data status</p>
                     </div>
                     <div class="row">
-                      <div class="col-12">
-                        <div class="preview-list">
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-primary">
-                                <i class="mdi mdi-file-document"></i>
-                              </div>
+                        <div class="col-12">
+                            <div class="preview-list">
+                                <div class="preview-item border-bottom">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-primary">
+                                            <i class="mdi mdi-file-document"></i>
+                                        </div>
+                                    </div>
+
+                                    <?php $no=1; foreach($st as $row): ?>
+                                    <div class="preview-item-content d-sm-flex flex-grow">
+                                        <div class="flex-grow">
+                                            <h6 class="preview-subject"><?=$row['nm_pegawai']?></h6>
+                                            <p class="text-muted mb-0"><?=$row['nip']?>
+                                                <br>
+                                                <?=$row['jabatan']?> | <?=$row['pg']?>
+                                            </p>
+                                        </div>
+                                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                            <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
+                                            <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+
+                                </div>
                             </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Admin dashboard design</h6>
-                                <p class="text-muted mb-0">Broadcast web app mockup</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">15 minutes ago</p>
-                                <p class="text-muted mb-0">30 tasks, 5 issues </p>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <div class="preview-item border-bottom">
-                            <div class="preview-thumbnail">
-                              <div class="preview-icon bg-danger">
-                                <i class="mdi mdi-email-open"></i>
-                              </div>
-                            </div>
-                            <div class="preview-item-content d-sm-flex flex-grow">
-                              <div class="flex-grow">
-                                <h6 class="preview-subject">Broadcast Mail</h6>
-                                <p class="text-muted mb-0">Sent release details to team</p>
-                              </div>
-                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                <p class="text-muted">55 minutes ago</p>
-                                <p class="text-muted mb-0">35 tasks, 7 issues </p>
-                              </div>
-                            </div>
-                          </div>
                         </div>
-                      </div>
+
+                        <div class="col-12">
+                            <div class="preview-list">
+                                <div class="preview-item border-bottom">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-primary">
+                                            <i class="mdi mdi-file-document"></i>
+                                        </div>
+                                    </div>
+
+                                    <?php $no=1; foreach($st as $row): ?>
+                                    <div class="preview-item-content d-sm-flex flex-grow">
+                                        <div class="flex-grow">
+                                            <h6 class="preview-subject"><?=$row['anggota1']?></h6>
+                                            <p class="text-muted mb-0"><?=$row['nip1']?>
+                                                <br>
+                                                <?=$row['jabatan1']?> | <?=$row['pg1']?>
+                                            </p>
+                                        </div>
+                                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                            <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
+                                            <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="preview-list">
+                                <div class="preview-item border-bottom">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-primary">
+                                            <i class="mdi mdi-file-document"></i>
+                                        </div>
+                                    </div>
+
+                                    <?php $no=1; foreach($st as $row): ?>
+                                    <div class="preview-item-content d-sm-flex flex-grow">
+                                        <div class="flex-grow">
+                                            <h6 class="preview-subject"><?=$row['anggota2']?></h6>
+                                            <p class="text-muted mb-0"><?=$row['nip2']?>
+                                                <br>
+                                                <?=$row['jabatan2']?> | <?=$row['pg2']?>
+                                            </p>
+                                        </div>
+                                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                            <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
+                                            <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="preview-list">
+                                <div class="preview-item border-bottom">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-primary">
+                                            <i class="mdi mdi-file-document"></i>
+                                        </div>
+                                    </div>
+
+                                    <?php $no=1; foreach($st as $row): ?>
+                                    <div class="preview-item-content d-sm-flex flex-grow">
+                                        <div class="flex-grow">
+                                            <h6 class="preview-subject"><?=$row['anggota3']?></h6>
+                                            <p class="text-muted mb-0"><?=$row['nip3']?>
+                                                <br>
+                                                <?=$row['jabatan3']?> | <?=$row['pg3']?>
+                                            </p>
+                                        </div>
+                                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                            <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
+                                            <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                   </div>
                 </div>
