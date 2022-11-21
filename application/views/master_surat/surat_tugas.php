@@ -54,17 +54,17 @@
                                 <tr>
                                     <td><?=$no++;?></td>
                                     <td><?=$row['admin_surat']?></td>
-                                    <td><a href="" data-bs-toggle="modal" data-bs-target="#lihat" style="text-decoration: none;"><?=$row['nm_pegawai']?></a></td>
+                                    <td><a href="" data-bs-toggle="modal" data-bs-target="#lihat<?=$row['id_surat'];?>" style="text-decoration: none;"><?=$row['nm_pegawai']?></a></td>
                                     <td><?=$row['nip']?></td>
                                     <td><?=indo_date($row['tanggal'])?></td>
                                     <td><?=$row['keterangan']?></td>
                                     
                                     <td>
-                                    <a data-bs-toggle="modal" data-bs-target="#anggota<?=$row['id_surat'];?>"><button class="btn btn-outline-info">Anggota</button></a>
+                                    <a data-bs-toggle="modal" data-bs-target="#anggota<?=$row['id_surat'];?>"><button class="btn btn-outline-info"><i class="mdi mdi-account-multiple-plus"></i></button></a>
 
-                                    <a data-bs-toggle="modal" data-bs-target="#updated<?=$row['id_surat'];?>"><button class="btn btn-outline-warning">Update</button></a>
+                                    <a data-bs-toggle="modal" data-bs-target="#updated<?=$row['id_surat'];?>"><button class="btn btn-outline-warning"><i class="mdi mdi-grease-pencil"></i></button></a>
 
-                                    <a data-bs-toggle="modal" data-bs-target="#remove<?=$row['id_surat'];?>"><button class="btn btn-outline-danger">Remove</button></a>
+                                    <a data-bs-toggle="modal" data-bs-target="#remove<?=$row['id_surat'];?>"><button class="btn btn-outline-danger"> <i class="mdi mdi-delete"></i> </button></a>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -178,6 +178,105 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>
+
+<!-- lihat data -->
+<?php $no=1; foreach($st as $row): ?>
+<div class="modal fade" id="lihat<?=$row['id_surat'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top:-3rem;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">
+				Anggota Perjalanan Dinas
+                </h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" >
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Transaction History</h4>
+                    <canvas id="transaction-history" class="transaction-chart"></canvas>
+                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                      <div class="text-md-center text-xl-left">
+                        <h6 class="mb-1">Transfer to Paypal</h6>
+                        <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
+                      </div>
+                      <div class="align-self-center flex-grow text-end text-md-center text-xl-right py-md-2 py-xl-0">
+                        <h6 class="font-weight-bold mb-0">$236</h6>
+                      </div>
+                    </div>
+                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                      <div class="text-md-center text-xl-left">
+                        <h6 class="mb-1">Tranfer to Stripe</h6>
+                        <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
+                      </div>
+                      <div class="align-self-center flex-grow text-end text-md-center text-xl-right py-md-2 py-xl-0">
+                        <h6 class="font-weight-bold mb-0">$593</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-row justify-content-between">
+                      <h4 class="card-title mb-1">Data Pegawai</h4>
+                      <p class="text-muted mb-1">Your data status</p>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="preview-list">
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-primary">
+                                <i class="mdi mdi-file-document"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Admin dashboard design</h6>
+                                <p class="text-muted mb-0">Broadcast web app mockup</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">15 minutes ago</p>
+                                <p class="text-muted mb-0">30 tasks, 5 issues </p>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                              <div class="preview-icon bg-danger">
+                                <i class="mdi mdi-email-open"></i>
+                              </div>
+                            </div>
+                            <div class="preview-item-content d-sm-flex flex-grow">
+                              <div class="flex-grow">
+                                <h6 class="preview-subject">Broadcast Mail</h6>
+                                <p class="text-muted mb-0">Sent release details to team</p>
+                              </div>
+                              <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                <p class="text-muted">55 minutes ago</p>
+                                <p class="text-muted mb-0">35 tasks, 7 issues </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
         </div>
     </div>
