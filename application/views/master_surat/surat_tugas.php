@@ -21,7 +21,7 @@
                             Masukkan No reg atau No SK bagi yang No ASN
                         </li>
                        </div>
-                    <footer class="blockquote-footer">Pengembang Sistem SPPD</footer>
+                    <footer class="blockquote-footer">Pengembang Sistem SPPD.</footer>
                 </blockquote>
             </div>
         </div>
