@@ -191,181 +191,180 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
-            <div class="row">
-              <div class="col-md-4 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Transaction History</h4>
-                    <canvas id="transaction-history" class="transaction-chart"></canvas>
-                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-                      <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">Transfer to Paypal</h6>
-                        <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-                      </div>
-                      <div class="align-self-center flex-grow text-end text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0">$236</h6>
-                      </div>
+                <div class="row">
+                    <div class="col-md-4 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Transaction History</h4>
+                                <canvas id="transaction-history" class="transaction-chart"></canvas>
+                                <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                                    <div class="text-md-center text-xl-left">
+                                        <h6 class="mb-1">Transfer to Paypal</h6>
+                                        <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
+                                    </div>
+                                    <div class="align-self-center flex-grow text-end text-md-center text-xl-right py-md-2 py-xl-0">
+                                        <h6 class="font-weight-bold mb-0">$236</h6>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                                    <div class="text-md-center text-xl-left">
+                                        <h6 class="mb-1">Tranfer to Stripe</h6>
+                                        <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
+                                    </div>
+                                    <div class="align-self-center flex-grow text-end text-md-center text-xl-right py-md-2 py-xl-0">
+                                        <h6 class="font-weight-bold mb-0">$593</h6>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-                      <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">Tranfer to Stripe</h6>
-                        <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-                      </div>
-                      <div class="align-self-center flex-grow text-end text-md-center text-xl-right py-md-2 py-xl-0">
-                        <h6 class="font-weight-bold mb-0">$593</h6>
-                      </div>
+                    <div class="col-md-8 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-row justify-content-between">
+                                    <h4 class="card-title mb-1">Data Pegawai</h4>
+                                    <p class="text-muted mb-1">Your data status</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="preview-list">
+                                            <div class="preview-item border-bottom">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-primary">
+                                                        <i class="mdi mdi-file-document"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="preview-item-content d-sm-flex flex-grow">
+                                                    <div class="flex-grow">
+                                                        <h6 class="preview-subject"><?=$row['nm_pegawai']?></h6>
+                                                        <p class="text-muted mb-0"><?=$row['nip']?>
+                                                            <br>
+                                                            <?=$row['jabatan']?> | <?=$row['pg']?>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                                        <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
+                                                        <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="preview-list">
+                                            <div class="preview-item border-bottom">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-primary">
+                                                        <i class="mdi mdi-file-document"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="preview-item-content d-sm-flex flex-grow">
+                                                    <div class="flex-grow">
+                                                        <h6 class="preview-subject"><?=$row['anggota1']?></h6>
+                                                        <p class="text-muted mb-0"><?=$row['nip1']?>
+                                                            <br>
+                                                            <?=$row['jabatan1']?> | <?=$row['pg1']?>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                                        <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
+                                                        <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="preview-list">
+                                            <div class="preview-item border-bottom">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-primary">
+                                                        <i class="mdi mdi-file-document"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="preview-item-content d-sm-flex flex-grow">
+                                                    <div class="flex-grow">
+                                                        <h6 class="preview-subject"><?=$row['anggota2']?></h6>
+                                                        <p class="text-muted mb-0"><?=$row['nip2']?>
+                                                            <br>
+                                                            <?=$row['jabatan2']?> | <?=$row['pg2']?>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                                        <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
+                                                        <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="preview-list">
+                                            <div class="preview-item border-bottom">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-primary">
+                                                        <i class="mdi mdi-file-document"></i>
+                                                    </div>
+                                                </div>
+
+                                                <div class="preview-item-content d-sm-flex flex-grow">
+                                                    <div class="flex-grow">
+                                                        <h6 class="preview-subject"><?=$row['anggota3']?></h6>
+                                                        <p class="text-muted mb-0"><?=$row['nip3']?>
+                                                            <br>
+                                                            <?=$row['jabatan3']?> | <?=$row['pg3']?>
+                                                        </p>
+                                                    </div>
+                                                    <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                                                        <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
+                                                        <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-8 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex flex-row justify-content-between">
-                      <h4 class="card-title mb-1">Data Pegawai</h4>
-                      <p class="text-muted mb-1">Your data status</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="preview-list">
-                                <div class="preview-item border-bottom">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-primary">
-                                            <i class="mdi mdi-file-document"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="preview-item-content d-sm-flex flex-grow">
-                                        <div class="flex-grow">
-                                            <h6 class="preview-subject"><?=$row['nm_pegawai']?></h6>
-                                            <p class="text-muted mb-0"><?=$row['nip']?>
-                                                <br>
-                                                <?=$row['jabatan']?> | <?=$row['pg']?>
-                                            </p>
-                                        </div>
-                                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                            <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
-                                            <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="preview-list">
-                                <div class="preview-item border-bottom">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-primary">
-                                            <i class="mdi mdi-file-document"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="preview-item-content d-sm-flex flex-grow">
-                                        <div class="flex-grow">
-                                            <h6 class="preview-subject"><?=$row['anggota1']?></h6>
-                                            <p class="text-muted mb-0"><?=$row['nip1']?>
-                                                <br>
-                                                <?=$row['jabatan1']?> | <?=$row['pg1']?>
-                                            </p>
-                                        </div>
-                                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                            <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
-                                            <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="preview-list">
-                                <div class="preview-item border-bottom">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-primary">
-                                            <i class="mdi mdi-file-document"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="preview-item-content d-sm-flex flex-grow">
-                                        <div class="flex-grow">
-                                            <h6 class="preview-subject"><?=$row['anggota2']?></h6>
-                                            <p class="text-muted mb-0"><?=$row['nip2']?>
-                                                <br>
-                                                <?=$row['jabatan2']?> | <?=$row['pg2']?>
-                                            </p>
-                                        </div>
-                                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                            <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
-                                            <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="preview-list">
-                                <div class="preview-item border-bottom">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-primary">
-                                            <i class="mdi mdi-file-document"></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="preview-item-content d-sm-flex flex-grow">
-                                        <div class="flex-grow">
-                                            <h6 class="preview-subject"><?=$row['anggota3']?></h6>
-                                            <p class="text-muted mb-0"><?=$row['nip3']?>
-                                                <br>
-                                                <?=$row['jabatan3']?> | <?=$row['pg3']?>
-                                            </p>
-                                        </div>
-                                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                                            <p class="text-muted"><?=indo_date($row['tanggal'])?></p>
-                                            <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             </div>
         </div>
     </div>
 </div>
 <?php endforeach; ?>
 
-<<<<<<< HEAD
 <!-- remove st -->
 <?php foreach($st as $row): ?>
-<div class="modal fade" id="remove<?=$row['id_surat'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+<div class="modal fade" id="remove<?=$row['id_surat'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top:-3rem;">
     <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-md" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <!-- <form class="form" method="post" action="<?=site_url('edit-provinsi')?>"> -->
-                    <div class="row">
-                        <div class="col-md-12 col-12 text-center">
-                            <h5>Anda yakin ingin menghapus Surat Tugas <br>An. <?=$row['nm_pegawai'];?> </h5>
-                        </div>
-
-                        <div class="col-12 d-flex justify-content-end mt-3">
-                            <a href="<?=site_url('remove-surat/'.$row['id_surat'])?>" type="submit" name="submit" class="btn btn-block btn-danger me-1 mb-1" style="width:100%;">
-                                Remove
-                            </a>
-                        </div>
+                <div class="row">
+                    <div class="col-md-12 col-12 text-center">
+                        <h5>Anda yakin ingin menghapus Surat Tugas <br>An. <?=$row['nm_pegawai'];?> </h5>
                     </div>
-                <!-- </form> -->
-=======
+
+                    <div class="col-12 d-flex justify-content-end mt-3">
+                        <a href="<?=site_url('remove-surat/'.$row['id_surat'])?>" type="submit" name="submit" class="btn btn-block btn-danger me-1 mb-1" style="width:100%;">
+                            Remove
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- print all -->
 <div class="modal fade" id="print" tabindex="-1" role="dialog" data-backdrop="static" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md" role="document" style="margin-top:-10rem;">
@@ -390,8 +389,8 @@
                         <div class="form-group col-md-6">
                             <label>Nama Pegawai <span class="text-danger">*</span></label>
                             <select name="nm_pegawai" class="form-control custom-select" required>
-                            <?php foreach($st as $row): ?>
-                                <option value="<?=$row['nm_pegawai'];?>"><?=$row['nm_pegawai'];?></option>
+                            <?php foreach($st as $rows): ?>
+                                <option value="<?=$rows['nm_pegawai'];?>"><?=$rows['nm_pegawai'];?></option>
                             <?php endforeach; ?>
                             </select>
                         </div>
@@ -402,13 +401,8 @@
                         </div>
                     </div>
                 </form>
->>>>>>> 13ec0d067d200f321d5cc03255743dd2cbba8b08
             </div>
         </div>
     </div>
 </div>
-<<<<<<< HEAD
 <?php endforeach; ?>
-=======
-<!-- end -->
->>>>>>> 13ec0d067d200f321d5cc03255743dd2cbba8b08
