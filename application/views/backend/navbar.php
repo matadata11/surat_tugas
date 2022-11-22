@@ -18,7 +18,7 @@
                 <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">+ Create New ST</a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
                   <h6 class="p-3 mb-0">Surat Tugas Perjadin</h6>
-                  <div class="dropdown-divider"></div>
+                  <!-- <div class="dropdown-divider"></div>
                   <a href="<?=site_url('surat');?>" class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
                       <div class="preview-icon bg-dark rounded-circle">
@@ -28,19 +28,19 @@
                     <div class="preview-item-content">
                       <p class="preview-subject ellipsis mb-1">Buat Surat</p>
                     </div>
-                  </a>
-                  <!-- <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
+                  </a> -->
+                  <div class="dropdown-divider"></div>
+                  <a href="<?=site_url('Surat');?>" class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
                       <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-web text-info"></i>
+                        <i class="mdi mdi-file text-info"></i>
                       </div>
                     </div>
                     <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">UI Development</p>
+                      <p class="preview-subject ellipsis mb-1">Buat ST</p>
                     </div>
                   </a>
-                  <div class="dropdown-divider"></div>
+                  <!-- <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
                       <div class="preview-icon bg-dark rounded-circle">

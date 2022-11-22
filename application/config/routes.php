@@ -13,10 +13,14 @@ $route['import-inputan']                = 'master/Pegawai/import_excel';
 $route['add-pptk']                      = 'master/Pptk/store';
 
 // surat_tugas
-$route['surat']                         = 'surat_tugas/Surat_tugas';
+$route['Surat']                         = 'surat_tugas/Surat_tugas';
 $route['add-surat']                     = 'surat_tugas/Surat_tugas/store';
 $route['edit-anggota']                  = 'surat_tugas/Surat_tugas/updated';
+<<<<<<< HEAD
 $route['remove-surat/(:num)']     	    = 'surat_tugas/Surat_tugas/destroy';
+=======
+$route['cetak-surat']                   = 'report/St';
+>>>>>>> 13ec0d067d200f321d5cc03255743dd2cbba8b08
 
 $route['Dashboard']                     = 'Dashboard';
 

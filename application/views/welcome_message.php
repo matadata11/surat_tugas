@@ -26,8 +26,9 @@
   <div class="content content-top">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 text-center">
           <img src="<?=__img('undraw_remotely_2j6y.svg');?>" alt="Image" class="img-fluid">
+          <p>Dikembangkan oleh <a href="https://notfound.id" class="mt-4" style="text-decoration:none;">Notfound Indonesia</a></p>
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
