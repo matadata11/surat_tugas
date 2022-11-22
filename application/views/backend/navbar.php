@@ -33,11 +33,11 @@
                   <a href="<?=site_url('Surat');?>" class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
                       <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-web text-info"></i>
+                        <i class="mdi mdi-file text-info"></i>
                       </div>
                     </div>
                     <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">UI Development</p>
+                      <p class="preview-subject ellipsis mb-1">Buat ST</p>
                     </div>
                   </a>
                   <!-- <div class="dropdown-divider"></div>
