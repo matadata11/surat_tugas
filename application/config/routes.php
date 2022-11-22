@@ -13,7 +13,7 @@ $route['import-inputan']                = 'master/Pegawai/import_excel';
 $route['add-pptk']                      = 'master/Pptk/store';
 
 // surat_tugas
-$route['surat']                         = 'surat_tugas/Surat_tugas';
+$route['Surat']                         = 'surat_tugas/Surat_tugas';
 $route['add-surat']                     = 'surat_tugas/Surat_tugas/store';
 $route['edit-anggota']                  = 'surat_tugas/Surat_tugas/updated';
 

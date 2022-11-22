@@ -1,4 +1,4 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas" id="sidebar" style="height:100%;">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
           <a class="sidebar-brand brand-logo" href="<?= site_url('Dashboard');?>"><img src="<?=__img('este.png');?>" alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini" href="<?= site_url('Dashboard');?>"><img src="<?=__img('logo-mini.svg');?>" alt="logo" /></a>
@@ -87,7 +87,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item menu-items">
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
               <span class="menu-icon">
                 <i class="mdi mdi-crosshairs-gps"></i>
@@ -165,8 +165,8 @@
                 <li class="nav-item"> <a class="nav-link" href="../../pages/forms/wizard.html">Wizard</a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item menu-items">
+          </li> -->
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>
@@ -271,8 +271,8 @@
               </span>
               <span class="menu-title">Popups</span>
             </a>
-          </li>
-          <li class="nav-item menu-items">
+          </li> -->
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
@@ -349,8 +349,8 @@
               </span>
               <span class="menu-title">Calendar</span>
             </a>
-          </li>
-          <li class="nav-item menu-items">
+          </li> -->
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="../../pages/apps/todo.html">
               <span class="menu-icon">
                 <i class="mdi mdi-bulletin-board"></i>
@@ -381,6 +381,10 @@
               </span>
               <span class="menu-title">Documentation</span>
             </a>
-          </li>
+          </li> -->
+
+          <div class="text-center mt-4">
+            <button class="btn btn-danger"><i class="mdi mdi-youtube"></i>Video Tutorial</button>
+          </div>
         </ul>
       </nav>

@@ -185,7 +185,7 @@
 <?php endforeach; ?>
 
 <!-- lihat data -->
-<?php $no=1; foreach($st as $row): ?>
+<?php foreach($st as $row): ?>
 <div class="modal fade" id="lihat<?=$row['id_surat'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top:-3rem;">
     <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content">
@@ -242,7 +242,6 @@
                                         </div>
                                     </div>
 
-                                    <?php $no=1; foreach($st as $row): ?>
                                     <div class="preview-item-content d-sm-flex flex-grow">
                                         <div class="flex-grow">
                                             <h6 class="preview-subject"><?=$row['nm_pegawai']?></h6>
@@ -256,7 +255,6 @@
                                             <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
                                         </div>
                                     </div>
-                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
@@ -271,7 +269,6 @@
                                         </div>
                                     </div>
 
-                                    <?php $no=1; foreach($st as $row): ?>
                                     <div class="preview-item-content d-sm-flex flex-grow">
                                         <div class="flex-grow">
                                             <h6 class="preview-subject"><?=$row['anggota1']?></h6>
@@ -285,7 +282,6 @@
                                             <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
                                         </div>
                                     </div>
-                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
@@ -300,7 +296,6 @@
                                         </div>
                                     </div>
 
-                                    <?php $no=1; foreach($st as $row): ?>
                                     <div class="preview-item-content d-sm-flex flex-grow">
                                         <div class="flex-grow">
                                             <h6 class="preview-subject"><?=$row['anggota2']?></h6>
@@ -314,7 +309,6 @@
                                             <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
                                         </div>
                                     </div>
-                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
@@ -329,7 +323,6 @@
                                         </div>
                                     </div>
 
-                                    <?php $no=1; foreach($st as $row): ?>
                                     <div class="preview-item-content d-sm-flex flex-grow">
                                         <div class="flex-grow">
                                             <h6 class="preview-subject"><?=$row['anggota3']?></h6>
@@ -343,7 +336,6 @@
                                             <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
                                         </div>
                                     </div>
-                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
