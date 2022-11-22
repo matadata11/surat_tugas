@@ -40,12 +40,12 @@
             <form method="post" action="<?=site_url('checkdulu')?>">
               <div class="form-group first mb-1">
                 <label for="email">Email</label>
-                <input type="email" name="email" class="form-control" id="email">
+                <input type="email" name="email" class="form-control" id="email" autocomplete="off">
               </div>
 
               <div class="form-group last mb-4">
                 <label for="password">Password</label>
-                <input type="password" name="password" class="form-control" id="password">
+                <input type="password" name="password" class="form-control" id="password" autocomplete="off">
               </div>
               
               <div class="d-flex mb-5 align-items-center">
