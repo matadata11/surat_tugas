@@ -16,6 +16,7 @@ $route['add-pptk']                      = 'master/Pptk/store';
 $route['Surat']                         = 'surat_tugas/Surat_tugas';
 $route['add-surat']                     = 'surat_tugas/Surat_tugas/store';
 $route['edit-anggota']                  = 'surat_tugas/Surat_tugas/updated';
+$route['cetak-surat']                   = 'report/St';
 
 $route['Dashboard']                     = 'Dashboard';
 

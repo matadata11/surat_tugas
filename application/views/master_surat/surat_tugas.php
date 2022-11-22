@@ -30,7 +30,7 @@
     <div class="card">
     <div class="card-header mb-2">
         <a data-bs-toggle="modal" data-bs-target="#add"> <button type="button" class="btn btn-inverse-primary btn-fw">Buat ST</button></a>
-        <!-- <a data-bs-toggle="modal" data-bs-target="#import"> <button type="button" class="btn btn-inverse-success btn-fw">Import</button></a> -->
+        <a data-bs-toggle="modal" data-bs-target="#print"> <button type="button" class="btn btn-inverse-success btn-fw">Print</button></a>
     </div>
         <div class="card-body">
             <h4 class="card-title">Data Surat Tugas Perjalaan Dinas</h4>
@@ -351,3 +351,45 @@
     </div>
 </div>
 <?php endforeach; ?>
+
+<!-- print all -->
+<div class="modal fade" id="print" tabindex="-1" role="dialog" data-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document" style="margin-top:-10rem;">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h5 class="modal-title">Print ALL</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="text-dark" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form method="post" action="<?=site_url('cetak-surat')?>">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Tanggal ST <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" name="tanggal" placeholder="Tanggal Surat">
+                        </div>
+                        <!-- <div class="form-group col-md-4">
+                            <label>Sampai Tanggal <span class="text-danger">*</span></label>
+                            <input type="date" class="form-control" name="tgl_selesai" placeholder="Tanggal Mulai">
+                        </div> -->
+                        <div class="form-group col-md-6">
+                            <label>Nama Pegawai <span class="text-danger">*</span></label>
+                            <select name="nm_pegawai" class="form-control custom-select" required>
+                            <?php foreach($st as $row): ?>
+                                <option value="<?=$row['nm_pegawai'];?>"><?=$row['nm_pegawai'];?></option>
+                            <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <button type="submit" name="submit" class="btn btn-primary"><i class="fas fa-check"></i> Simpan</button>
+                            <button data-dismiss="modal" class="btn btn-danger"><i class="fas fa-times"></i> Tutup</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end -->
