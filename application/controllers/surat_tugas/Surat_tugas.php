@@ -39,7 +39,6 @@ class Surat_tugas extends Admin_Controller {
 				$nm_pegawai 	    = $this->input->post('nm_pegawai', TRUE);
 				$tanggal 	        = $this->input->post('tanggal', TRUE);
 				$keterangan 	    = $this->input->post('keterangan', TRUE);
-				
 
 				$data = [
 					'admin_surat'		=> $admin_surat,
@@ -50,11 +49,15 @@ class Surat_tugas extends Admin_Controller {
 					'created_at'	    => date('Y-m-d')
 				];
 			}
-			$notif = $this->surat_tugas->entry($data);
-			if ($notif) {
-				$this->session->set_flashdata('notrue', 'Data Berhasil Disimpan.');
-			} else {
-				$this->session->set_flashdata('nofalse', 'Data Gagal Disimpan.');
+			$notif = $this->db->get_where('dt_surat', ['nm_pegawai' => $nm_pegawai,'tanggal' => $tanggal])->row_array();
+			if($notif){
+				$this->session->set_flashdata('notif_false', '<div class="alert alert-danger  alert-dismissible fade show" role="alert" id="notifications"><i class="mdi mdi-check-all me-2"></i> Anda Sudah ada pada tanggal ini  . </div>');
+			}else{
+				$notif  = $this->surat_tugas->entry($data);
+			}
+			if($notif){
+				$this->session->set_flashdata('notif_true', 'Terima Kasih');
+				$this->session->set_flashdata('audio', site_url('public/audio/terimakasih.mp3'));
 			}
 			redirect($_SERVER['HTTP_REFERER']);
 		}
@@ -102,6 +105,18 @@ class Surat_tugas extends Admin_Controller {
 			}
 			redirect($_SERVER['HTTP_REFERER']);
 		}
+	}
+
+	 // Hapus data jurusan
+	public function destroy()
+	{
+		$notif = $this->surat_tugas->delete();
+		if ($notif) {
+			$this->session->set_flashdata('notrue', 'Data Berhasil Dihapus.');
+		} else {
+			$this->session->set_flashdata('nofalse', 'Data Gagal Dihapus.');
+		}
+		redirect($_SERVER['HTTP_REFERER']);
 	}
 
 }

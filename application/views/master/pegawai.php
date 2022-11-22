@@ -202,6 +202,7 @@
     </div>
 </div>
 <?php endforeach; ?>
+
 <!-- remove pegawai -->
 <?php foreach($pegawai as $row): ?>
 <div class="modal fade" id="remove<?=$row['id_pegawai'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >

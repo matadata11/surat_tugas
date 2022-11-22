@@ -27,6 +27,11 @@ class M_st extends CI_Model {
         return $query;
     }
 
+    public function delete(){
+        $query = $this->db->delete($this->_table, ['id_surat' => __uri(2)]);
+        return $query;
+    }
+
 }
 
 /* End of file M_st.php */

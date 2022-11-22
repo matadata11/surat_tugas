@@ -1,3 +1,4 @@
+<?php echo $this->session->flashdata('notif_false'); ?>
 <div class="page-header">
         <h3 class="page-title"> Master Surat Tugas Perjalanan Dinas </h3>
         <nav aria-label="breadcrumb">
@@ -45,7 +46,7 @@
                                     <th>Nama Pegawai</th>
                                     <th>NIP/NoReg/NoSK</th>
                                     <th>Tanggal ST</th>
-                                    <th>Keterangan Tugas</th>
+                                    <!-- <th>Keterangan Tugas</th> -->
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -54,10 +55,10 @@
                                 <tr>
                                     <td><?=$no++;?></td>
                                     <td><?=$row['admin_surat']?></td>
-                                    <td><a href="" data-bs-toggle="modal" data-bs-target="#lihat<?=$row['id_surat'];?>" style="text-decoration: none;"><?=$row['nm_pegawai']?></a></td>
+                                    <td><a href="#" data-bs-toggle="modal" data-bs-target="#lihat<?=$row['id_surat'];?>" style="text-decoration: none;"><?=$row['nm_pegawai']?></a></td>
                                     <td><?=$row['nip']?></td>
                                     <td><?=indo_date($row['tanggal'])?></td>
-                                    <td><?=$row['keterangan']?></td>
+                                    <!-- <td style="word-wrap: break-word;"><?=$row['keterangan']?></td> -->
                                     
                                     <td>
                                     <a data-bs-toggle="modal" data-bs-target="#anggota<?=$row['id_surat'];?>"><button class="btn btn-outline-info"><i class="mdi mdi-account-multiple-plus"></i></button></a>
@@ -185,18 +186,10 @@
 <?php endforeach; ?>
 
 <!-- lihat data -->
-<?php $no=1; foreach($st as $row): ?>
+<?php foreach($st as $row): ?>
 <div class="modal fade" id="lihat<?=$row['id_surat'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top:-3rem;">
     <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content">
-            <!-- <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">
-				Anggota Perjalanan Dinas
-                </h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" >
-                    <i data-feather="x"></i>
-                </button>
-            </div> -->
             <div class="modal-body">
             <div class="row">
               <div class="col-md-4 grid-margin stretch-card">
@@ -242,7 +235,6 @@
                                         </div>
                                     </div>
 
-                                    <?php $no=1; foreach($st as $row): ?>
                                     <div class="preview-item-content d-sm-flex flex-grow">
                                         <div class="flex-grow">
                                             <h6 class="preview-subject"><?=$row['nm_pegawai']?></h6>
@@ -256,7 +248,6 @@
                                             <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
                                         </div>
                                     </div>
-                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
@@ -271,7 +262,6 @@
                                         </div>
                                     </div>
 
-                                    <?php $no=1; foreach($st as $row): ?>
                                     <div class="preview-item-content d-sm-flex flex-grow">
                                         <div class="flex-grow">
                                             <h6 class="preview-subject"><?=$row['anggota1']?></h6>
@@ -285,7 +275,6 @@
                                             <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
                                         </div>
                                     </div>
-                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
@@ -300,7 +289,6 @@
                                         </div>
                                     </div>
 
-                                    <?php $no=1; foreach($st as $row): ?>
                                     <div class="preview-item-content d-sm-flex flex-grow">
                                         <div class="flex-grow">
                                             <h6 class="preview-subject"><?=$row['anggota2']?></h6>
@@ -314,7 +302,6 @@
                                             <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
                                         </div>
                                     </div>
-                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
@@ -329,7 +316,6 @@
                                         </div>
                                     </div>
 
-                                    <?php $no=1; foreach($st as $row): ?>
                                     <div class="preview-item-content d-sm-flex flex-grow">
                                         <div class="flex-grow">
                                             <h6 class="preview-subject"><?=$row['anggota3']?></h6>
@@ -343,7 +329,6 @@
                                             <!-- <p class="text-muted mb-0">30 tasks, 5 issues </p> -->
                                         </div>
                                     </div>
-                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
@@ -354,6 +339,31 @@
                 </div>
               </div>
             </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>
+
+<!-- remove st -->
+<?php foreach($st as $row): ?>
+<div class="modal fade" id="remove<?=$row['id_surat'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!-- <form class="form" method="post" action="<?=site_url('edit-provinsi')?>"> -->
+                    <div class="row">
+                        <div class="col-md-12 col-12 text-center">
+                            <h5>Anda yakin ingin menghapus Surat Tugas <br>An. <?=$row['nm_pegawai'];?> </h5>
+                        </div>
+
+                        <div class="col-12 d-flex justify-content-end mt-3">
+                            <a href="<?=site_url('remove-surat/'.$row['id_surat'])?>" type="submit" name="submit" class="btn btn-block btn-danger me-1 mb-1" style="width:100%;">
+                                Remove
+                            </a>
+                        </div>
+                    </div>
+                <!-- </form> -->
             </div>
         </div>
     </div>
