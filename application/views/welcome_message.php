@@ -28,17 +28,17 @@
       <div class="row">
         <div class="col-md-6 text-center">
           <img src="<?=__img('undraw_remotely_2j6y.svg');?>" alt="Image" class="img-fluid">
-          <p>Dikembangkan oleh <a href="https://notfound.id" class="mt-4" style="text-decoration:none;">Notfound Indonesia</a></p>
+         
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="mb-4">
-              <h3>Sign In</h3>
-              <p class="mb-4">Please login with your active account.</p>
+              <h3>Sign In <small class="text-muted">(Single Sign On)</small></h3>
+              <p class="mb-4">silahkan login dengan Akun Google atau Github anda.</p>
             </div>
             <form method="post" action="<?=site_url('checkdulu')?>">
-              <div class="form-group first mb-1">
+              <!-- <div class="form-group first mb-1">
                 <label for="email">Email</label>
                 <input type="email" name="email" class="form-control" id="email" autocomplete="off">
               </div>
@@ -58,12 +58,25 @@
 
               <input type="submit" name="submit" value="Log In" class="btn btn-block btn-primary">
 
-              <span class="d-block text-left my-4 text-muted">&mdash; or login with &mdash;</span>
+              <span class="d-block text-left my-4 text-muted text-center">&mdash; or login with &mdash;</span> -->
               
-              <div class="social-login">
-                <a href="#" class="google">
-                  <span class="icon-google mr-3"></span> 
-                </a>
+              <div class="social-login" >
+                 <?php
+                    if(!isset($login_button))
+                    {
+
+                    }
+                    else
+                    {
+                    echo '<div style="margin-left:-5px;">'.$login_button . '</div>';
+                    }
+                ?>
+
+                <br>
+                <img src="https://user-images.githubusercontent.com/9599/61177475-2ddce800-a58b-11e9-9bf6-aa4794a99f2a.png" alt="" style="margin-left:-10px;width:23rem;margin-top:-10px;">
+              </div>
+              <div class="text-center">
+              <p>Dikembangkan oleh <a href="https://notfound.id" class="mt-4" style="text-decoration:none;"><b>Notfound Indonesia</b></a></p>
               </div>
             </form>
             </div>
