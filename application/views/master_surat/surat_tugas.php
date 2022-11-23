@@ -96,7 +96,7 @@
                         <div class="col-md-12 col-12">
                             <div class="form-group">
                                 <label for="email-id-column" class="mb-2">NIP <small><font color="red">*</font></small></label>
-                                <input type="hidden" id="email-id-column" class="form-control" name="admin_surat" value="<?=__session('fullname');?>" required/>
+                                <input type="hidden" id="email-id-column" class="form-control" name="admin_surat" value="<?php $user_data = $this->session->userdata('user_data'); echo $user_data['name'];?>" required/>
                                 <input type="text" id="nip" class="form-control" name="nip" placeholder="ex. 19962020 *********" required autocomplete="off"/>
                             </div>
 
