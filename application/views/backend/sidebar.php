@@ -331,31 +331,31 @@
                 <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
               </ul>
             </div>
-          </li>
+          </li>-->
           <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#e-commerce" aria-expanded="false" aria-controls="e-commerce">
               <span class="menu-icon">
-                <i class="mdi mdi-medical-bag"></i>
+                <i class="mdi mdi-recycle"></i>
               </span>
-              <span class="menu-title">E-commerce</span>
+              <span class="menu-title">Patching Sistem</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="e-commerce">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/invoice.html"> Invoice </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/pricing-table.html"> Pricing Table </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/orders.html"> Orders </a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?=site_url('patch');?>"> Patching </a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="../../pages/samples/pricing-table.html"> Pricing Table </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/orders.html"> Orders </a></li> -->
               </ul>
             </div>
           </li>
-          <li class="nav-item menu-items">
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="../../pages/apps/calendar.html">
               <span class="menu-icon">
                 <i class="mdi mdi-calendar-today"></i>
               </span>
               <span class="menu-title">Calendar</span>
             </a>
-          </li> -->
+          </li>  -->
           <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="../../pages/apps/todo.html">
               <span class="menu-icon">

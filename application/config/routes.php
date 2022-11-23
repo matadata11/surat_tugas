@@ -23,6 +23,10 @@ $route['cetak-surat']                   = 'report/St';
 
 $route['Dashboard']                     = 'Dashboard';
 
+$route['patch']                         = 'patch/Master_patch';
+$route['patching']                      = 'patch/Master_patch/patchsystem';
+$route['assets']                        = 'patch/Master_patch/patchassets';
+
 $route['checkdulu']            	        = 'auth/login/checklogin';
 $route['checkgtk']            	        = 'auth/login/checkgtk';
 $route['keluaraja']            	        = 'auth/login/logout';
