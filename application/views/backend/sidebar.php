@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar" style="height:100%;">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="<?= site_url('Dashboard');?>"><img src="<?=__img('este.png');?>" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="<?= site_url('Dashboard');?>"><img src="<?=__img('sppd1.png');?>" style="width:150px;height:40px;" alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini" href="<?= site_url('Dashboard');?>"><img src="<?=__img('logo-mini.svg');?>" alt="logo" /></a>
         </div>
         <ul class="nav">
@@ -8,12 +8,18 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="<?=__img('faces/face15.jpg');?>" alt="">
+                  <!-- <img class="img-xs rounded-circle " src="<?=__img('faces/face15.jpg');?>" alt=""> -->
+                  <?php $user_data = $this->session->userdata('user_data'); echo '<img src="'.$user_data['picture'].'" class="img-xs rounded-circle" />'?>
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal"><?=__session('fullname');?></h5>
-                  <span><?=__session('role');?></span>
+                  <h5 class="mb-0 font-weight-normal">
+                  <?php 
+                 $user_data = $this->session->userdata('user_data');
+                 echo $user_data['name'];
+                 ?>
+                 </h5>
+                  <span style="font-size:9px;"><?php $user_data = $this->session->userdata('user_data'); echo $user_data['email'];?></span>
                 </div>
               </div>
               <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -383,8 +389,8 @@
             </a>
           </li> -->
 
-          <div class="text-center mt-4">
+          <!-- <div class="text-center mt-4">
             <button class="btn btn-danger"><i class="mdi mdi-youtube"></i>Video Tutorial</button>
-          </div>
+          </div> -->
         </ul>
       </nav>

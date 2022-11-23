@@ -134,5 +134,33 @@
  
         });
     </script>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+             $('#nip1').on('input',function(){
+                 
+                var nip=$(this).val();
+                $.ajax({
+                    type : "POST",
+                    url  : "<?php echo base_url('master/Pegawai/get_pegawai')?>",
+                    dataType : "JSON",
+                    data : {nip: nip},
+                    cache:false,
+                    success: function(data){
+                        $.each(data,function(nip, nm_pegawai){
+                            $('[name="nm_pegawai"]').val(data.nm_pegawai);
+                            // $('[name="id_pegawai"]').val(data.id_pegawai);
+                            // $('[name="satuan"]').val(data.satuan);
+                             
+                        });
+                         
+                    }
+                });
+                return false;
+           });
+ 
+        });
+    </script>
+
   </body>
 </html>

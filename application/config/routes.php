@@ -11,6 +11,8 @@ $route['import-inputan']                = 'master/Pegawai/import_excel';
 
 // data pptk
 $route['add-pptk']                      = 'master/Pptk/store';
+$route['updated-pptk']                  = 'master/Pptk/updated';
+$route['remove-pptk/(:num)']            = 'master/Pptk/deleted';
 
 // surat_tugas
 $route['Surat']                         = 'surat_tugas/Surat_tugas';

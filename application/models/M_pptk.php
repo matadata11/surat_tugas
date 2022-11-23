@@ -21,6 +21,20 @@ class M_pptk extends CI_Model {
 		return $this->db->insert($this->_table, $data);
 	}
 
+	// ubah data
+    public function update($data, $id_pptk){
+        $query = $this->db->where('id_pptk', $id_pptk);
+        $query = $this->db->update($this->_table, $data);
+        return $query;
+    }
+
+	// Menghapus data dari database
+	public function delete()
+	{
+		$key = $this->uri->segment(2);
+		return $this->db->delete($this->_table,['id_pptk' => $key]);
+	}
+
 }
 
 /* End of file M_pptk.php */
