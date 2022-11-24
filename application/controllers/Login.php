@@ -46,7 +46,7 @@ class Login extends CI_Controller {
 		  {
 		  	// uncomentar kode dibawah untuk melihat data session email
 		  	// echo json_encode($this->session->userdata('access_token')); 
-		  	// echo json_encode($this->session->userdata('user_data'));
+		  	echo json_encode($this->session->userdata('user_data'));
 			  redirect('Dashboard');
 			
 		//    echo "Login success";
