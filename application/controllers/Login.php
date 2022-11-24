@@ -7,9 +7,9 @@ class Login extends CI_Controller {
 	{
 		include_once APPPATH . "../vendor/autoload.php";
 		  $google_client = new Google_Client();
-		  $google_client->setClientId('67743246176-1anmlvvee1650qdnk78eivbob94cloqi.apps.googleusercontent.com'); //masukkan ClientID anda 
-		  $google_client->setClientSecret('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'); //masukkan Client Secret Key anda
-		  $google_client->setRedirectUri('http://localhost:8080/surat_tugas'); //Masukkan Redirect Uri anda
+		  $google_client->setClientId('67743246176-3nbpdjmjcv771g0lvlfin4ed0ebuui2u.apps.googleusercontent.com'); //masukkan ClientID anda 
+		  $google_client->setClientSecret('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'); //masukkan Client Secret Key anda
+		  $google_client->setRedirectUri('http://localhost:8080/surat_tugas/'); //Masukkan Redirect Uri anda
 		  $google_client->addScope('email');
 		  $google_client->addScope('profile');
 
