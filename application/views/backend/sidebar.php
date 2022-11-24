@@ -14,11 +14,11 @@
                 </div>
                 <div class="profile-name">
                   <h5 class="mb-0 font-weight-normal">
-                  <?php 
-                 $user_data = $this->session->userdata('user_data');
-                 echo $user_data['name'];
-                 ?>
-                 </h5>
+                    <?php
+                      $user_data = $this->session->userdata('user_data');
+                      echo $user_data['name'];
+                    ?>
+                  </h5>
                   <span style="font-size:9px;"><?php $user_data = $this->session->userdata('user_data'); echo $user_data['email'];?> <br> </span>
                 </div>
               </div>
