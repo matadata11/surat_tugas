@@ -8,6 +8,8 @@ class M_pptk extends CI_Model {
     // Mengambil data dari database
     public function getPptk()
     {
+		$user_data = $this->session->userdata('user_data');
+        $this->db->where('admin_pptk', $this->session->userdata('user_data')['name']);
         $this->db->select('*');
 		$this->db->join('mt_pegawai', 'mt_pegawai.nip = mt_pptk.nip');
 		// $this->db->join('mt_instansi', 'mt_instansi.instansi = mt_gtk.instansi');

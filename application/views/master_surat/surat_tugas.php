@@ -46,7 +46,7 @@
                                     <th>Nama Pegawai</th>
                                     <th>NIP/NoReg/NoSK</th>
                                     <th>Tanggal ST</th>
-                                    <!-- <th>Keterangan Tugas</th> -->
+                                    <th>Sampai</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -58,6 +58,7 @@
                                     <td><a href="#" data-bs-toggle="modal" data-bs-target="#lihat<?=$row['id_surat'];?>" style="text-decoration: none;"><?=$row['nm_pegawai']?></a></td>
                                     <td><?=$row['nip']?></td>
                                     <td><?=indo_date($row['tanggal'])?></td>
+                                    <td><?=indo_date($row['sampai'])?></td>
                                     <!-- <td style="word-wrap: break-word;"><?=$row['keterangan']?></td> -->
                                     
                                     <td>
@@ -108,6 +109,11 @@
                             <div class="form-group">
                                 <label for="tanggal">Tanggal ST <small><font color="red">*</font></small></label>
                                 <input type="date" name="tanggal" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tanggal">Sampai Tanggal <small><font color="red">*</font></small></label>
+                                <input type="date" name="sampai" class="form-control" required>
                             </div>
 
                             <div class="form-group">

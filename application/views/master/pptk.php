@@ -147,7 +147,7 @@
                                 $user_data = $this->session->userdata('user_data');
                                 echo $user_data['name'];
                                 ?>" required/>
-                                <input type="text" class="form-control" name="id_pptk" value="<?=$row['id_pptk'];?>" required autocomplete="off"/>
+                                <input type="hidden" class="form-control" name="id_pptk" value="<?=$row['id_pptk'];?>" required autocomplete="off"/>
                                 <input type="text" id="nip1" class="form-control" name="nip" value="<?=$row['nip'];?>" required autocomplete="off"/>
                             </div>
 

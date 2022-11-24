@@ -29,6 +29,7 @@ class Surat_tugas extends Admin_Controller {
 		$this->form_validation->set_rules('nip', 'NIP', 'required');
 		$this->form_validation->set_rules('nm_pegawai', 'Nama Pegawai', 'required');
 		$this->form_validation->set_rules('tanggal', 'Tanggal ST', 'required');
+		$this->form_validation->set_rules('sampai', 'Tanggal ST', 'required');
 		$this->form_validation->set_rules('keterangan', 'Keterangan Perjalanan Dinas', 'required');
 		
 
@@ -38,6 +39,7 @@ class Surat_tugas extends Admin_Controller {
 				$nip 		        = $this->input->post('nip', TRUE);
 				$nm_pegawai 	    = $this->input->post('nm_pegawai', TRUE);
 				$tanggal 	        = $this->input->post('tanggal', TRUE);
+				$sampai 	        = $this->input->post('sampai', TRUE);
 				$keterangan 	    = $this->input->post('keterangan', TRUE);
 
 				$data = [

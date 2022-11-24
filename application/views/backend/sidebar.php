@@ -19,7 +19,7 @@
                  echo $user_data['name'];
                  ?>
                  </h5>
-                  <span style="font-size:9px;"><?php $user_data = $this->session->userdata('user_data'); echo $user_data['email'];?></span>
+                  <span style="font-size:9px;"><?php $user_data = $this->session->userdata('user_data'); echo $user_data['email'];?> <br> </span>
                 </div>
               </div>
               <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
