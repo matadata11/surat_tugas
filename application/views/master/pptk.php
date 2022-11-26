@@ -41,12 +41,12 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Admin</th>
+                                    <!-- <th>Admin</th> -->
                                     <th>Nama Pegawai</th>
                                     <th>NIP</th>
                                     <th>Jabatan</th>
                                     <th>Pangkat/Gol</th>
-                                    <th>Status</th>
+                                    <!-- <th>Status</th> -->
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -54,18 +54,18 @@
                             <?php $no=1; foreach($pptk as $row): ?>
                                 <tr>
                                     <td><?=$no++;?></td>
-                                    <td><?=$row['admin_pptk']?></td>
+                                    <!-- <td><?=$row['admin_pptk']?></td> -->
                                     <td><?=$row['nm_pegawai']?></td>
                                     <td><?=$row['nip']?></td>
                                     <td><?=$row['jabatan']?></td>
                                     <td><?=$row['pg']?></td>
-                                    <td>
+                                    <!-- <td>
                                     <label class="badge badge-info"><?=$row['status']?></label>
-                                    </td>
+                                    </td> -->
                                     <td>
-                                    <a data-bs-toggle="modal" data-bs-target="#updated<?=$row['id_pegawai'];?>"><button class="btn btn-outline-warning">Update</button></a>
+                                    <a data-bs-toggle="modal" data-bs-target="#updated<?=$row['id_pptk'];?>"><button class="btn btn-outline-warning">Update</button></a>
 
-                                    <a data-bs-toggle="modal" data-bs-target="#remove<?=$row['id_pegawai'];?>"><button class="btn btn-outline-danger">Remove</button></a>
+                                    <a data-bs-toggle="modal" data-bs-target="#remove<?=$row['id_pptk'];?>"><button class="btn btn-outline-danger">Remove</button></a>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -96,7 +96,10 @@
                         <div class="col-md-12 col-12">
                             <div class="form-group">
                                 <label for="email-id-column" class="mb-2">NIP <small><font color="red">*</font></small></label>
-                                <input type="hidden" id="email-id-column" class="form-control" name="admin_pptk" value="<?=__session('fullname');?>" required/>
+                                <input type="hidden" id="email-id-column" class="form-control" name="admin_pptk" value="<?php 
+                                $user_data = $this->session->userdata('user_data');
+                                echo $user_data['name'];
+                                ?>" required/>
                                 <input type="text" id="nip" class="form-control" name="nip" placeholder="ex. 19962020 *********" required autocomplete="off"/>
                             </div>
 
@@ -120,3 +123,75 @@
         </div>
     </div>
 </div>
+
+<!-- modal update -->
+<?php foreach($pptk as $row): ?>
+<div class="modal fade" id="updated<?=$row['id_pptk'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top:-3rem;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">
+				Cari Data Pegawai
+                </h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" >
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form" method="post" action="<?=site_url('updated-pptk')?>">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <div class="form-group">
+                                <label for="email-id-column" class="mb-2">NIP <small><font color="red">*</font></small></label>
+                                <input type="hidden" id="email-id-column" class="form-control" name="admin_pptk" value="<?php 
+                                $user_data = $this->session->userdata('user_data');
+                                echo $user_data['name'];
+                                ?>" required/>
+                                <input type="hidden" class="form-control" name="id_pptk" value="<?=$row['id_pptk'];?>" required autocomplete="off"/>
+                                <input type="text" id="nip1" class="form-control" name="nip" value="<?=$row['nip'];?>" required autocomplete="off"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nama_pegawai" class="mb-2"> Nama Pegawai <small><font color="red">*</font> </small></label>
+                                <input type="text" class="form-control" name="nm_pegawai" value="<?=$row['nm_pegawai'];?>" required autocomplete="off">
+                            </div>
+
+                        </div>
+                        <div class="col-12 d-flex justify-content-end">
+                            <button type="submit" name="submit" class="btn btn-warning me-1 mb-1 mr-1">
+                                Ubah
+                            </button>
+                            <button type="reset" class="btn btn-secondary me-1 mb-1">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>
+
+<!-- remove -->
+<?php foreach($pptk as $row): ?>
+<div class="modal fade" id="remove<?=$row['id_pptk'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 col-12 text-center">
+                        <h5>Anda yakin ingin menghapus PPTK <br> <?=$row['nm_pegawai'];?> </h5>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-end mt-3">
+                        <a href="<?=site_url('remove-pptk/'.$row['id_pptk'])?>" type="submit" name="submit" class="btn btn-block btn-danger me-1 mb-1" style="width:100%;">
+                            Remove
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>

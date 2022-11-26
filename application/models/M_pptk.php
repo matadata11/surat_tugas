@@ -8,6 +8,8 @@ class M_pptk extends CI_Model {
     // Mengambil data dari database
     public function getPptk()
     {
+		$user_data = $this->session->userdata('user_data');
+        $this->db->where('admin_pptk', $this->session->userdata('user_data')['name']);
         $this->db->select('*');
 		$this->db->join('mt_pegawai', 'mt_pegawai.nip = mt_pptk.nip');
 		// $this->db->join('mt_instansi', 'mt_instansi.instansi = mt_gtk.instansi');
@@ -19,6 +21,20 @@ class M_pptk extends CI_Model {
 	public function entry($data)
 	{
 		return $this->db->insert($this->_table, $data);
+	}
+
+	// ubah data
+    public function update($data, $id_pptk){
+        $query = $this->db->where('id_pptk', $id_pptk);
+        $query = $this->db->update($this->_table, $data);
+        return $query;
+    }
+
+	// Menghapus data dari database
+	public function delete()
+	{
+		$key = $this->uri->segment(2);
+		return $this->db->delete($this->_table,['id_pptk' => $key]);
 	}
 
 }

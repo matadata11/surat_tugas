@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar" style="height:100%;">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="<?= site_url('Dashboard');?>"><img src="<?=__img('este.png');?>" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="<?= site_url('Dashboard');?>"><img src="<?=__img('sppd1.png');?>" style="width:150px;height:40px;" alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini" href="<?= site_url('Dashboard');?>"><img src="<?=__img('logo-mini.svg');?>" alt="logo" /></a>
         </div>
         <ul class="nav">
@@ -8,12 +8,18 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="<?=__img('faces/face15.jpg');?>" alt="">
+                  <!-- <img class="img-xs rounded-circle " src="<?=__img('faces/face15.jpg');?>" alt=""> -->
+                  <?php $user_data = $this->session->userdata('user_data'); echo '<img src="'.$user_data['picture'].'" class="img-xs rounded-circle" />'?>
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal"><?=__session('fullname');?></h5>
-                  <span><?=__session('role');?></span>
+                  <h5 class="mb-0 font-weight-normal">
+                    <?php
+                      $user_data = $this->session->userdata('user_data');
+                      echo $user_data['name'];
+                    ?>
+                  </h5>
+                  <span style="font-size:9px;"><?php $user_data = $this->session->userdata('user_data'); echo $user_data['email'];?> <br> </span>
                 </div>
               </div>
               <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -325,31 +331,31 @@
                 <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
               </ul>
             </div>
-          </li>
+          </li>-->
           <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#e-commerce" aria-expanded="false" aria-controls="e-commerce">
               <span class="menu-icon">
-                <i class="mdi mdi-medical-bag"></i>
+                <i class="mdi mdi-recycle"></i>
               </span>
-              <span class="menu-title">E-commerce</span>
+              <span class="menu-title">Patching Sistem</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="e-commerce">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/invoice.html"> Invoice </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/pricing-table.html"> Pricing Table </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/orders.html"> Orders </a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?=site_url('patch');?>"> Patching </a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="../../pages/samples/pricing-table.html"> Pricing Table </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/orders.html"> Orders </a></li> -->
               </ul>
             </div>
           </li>
-          <li class="nav-item menu-items">
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="../../pages/apps/calendar.html">
               <span class="menu-icon">
                 <i class="mdi mdi-calendar-today"></i>
               </span>
               <span class="menu-title">Calendar</span>
             </a>
-          </li> -->
+          </li>  -->
           <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="../../pages/apps/todo.html">
               <span class="menu-icon">
@@ -383,8 +389,8 @@
             </a>
           </li> -->
 
-          <div class="text-center mt-4">
+          <!-- <div class="text-center mt-4">
             <button class="btn btn-danger"><i class="mdi mdi-youtube"></i>Video Tutorial</button>
-          </div>
+          </div> -->
         </ul>
       </nav>

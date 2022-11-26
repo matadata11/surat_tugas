@@ -33,6 +33,32 @@
     <link rel="stylesheet" href="<?=__css('style1.css');?>">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="<?=__img('favicon.png');?>" />
+
+    <style>
+        #notifications {
+
+            cursor: pointer;
+            position: fixed;
+            right: 0px;
+            z-index: 9999;
+            top: 20px;
+            margin-bottom: 22px;
+            margin-right: 15px;
+            min-width: 50px;
+        }
+
+        #notif_hapus {
+            cursor: pointer;
+            position: fixed;
+            right: 0px;
+            z-index: 9999;
+            bottom: -20px;
+            margin-bottom: 22px;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+    </style>
+    
   </head>
   <body class="sidebar-fixed">
     <div class="container-scroller">
@@ -108,6 +134,13 @@
     <script src="<?=__js('jquery-3.1.1.min.js');?>"></script>
     <!-- End custom js for this page -->
 
+    <script>
+        $('#notifications').slideDown('slow').delay(4000).slideUp('slow');
+    </script>
+    <script>
+        $('#notif_hapus').slideDown('slow').delay(2000).slideUp('slow');
+    </script>
+
     <script type="text/javascript">
         $(document).ready(function(){
              $('#nip').on('input',function(){
@@ -134,5 +167,33 @@
  
         });
     </script>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+             $('#nip1').on('input',function(){
+                 
+                var nip=$(this).val();
+                $.ajax({
+                    type : "POST",
+                    url  : "<?php echo base_url('master/Pegawai/get_pegawai')?>",
+                    dataType : "JSON",
+                    data : {nip: nip},
+                    cache:false,
+                    success: function(data){
+                        $.each(data,function(nip, nm_pegawai){
+                            $('[name="nm_pegawai"]').val(data.nm_pegawai);
+                            // $('[name="id_pegawai"]').val(data.id_pegawai);
+                            // $('[name="satuan"]').val(data.satuan);
+                             
+                        });
+                         
+                    }
+                });
+                return false;
+           });
+ 
+        });
+    </script>
+
   </body>
 </html>

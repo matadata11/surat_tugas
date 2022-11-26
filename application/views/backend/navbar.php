@@ -6,13 +6,13 @@
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
               <span class="mdi mdi-menu"></span>
             </button>
-            <ul class="navbar-nav w-100">
+            <!-- <ul class="navbar-nav w-100">
               <li class="nav-item w-100">
                 <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
                   <input type="text" class="form-control" placeholder="Search letter of assignment">
                 </form>
               </li>
-            </ul>
+            </ul> -->
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item dropdown d-none d-lg-block">
                 <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">+ Create New ST</a>
@@ -56,9 +56,7 @@
                 </div>
               </li>
               <li class="nav-item nav-settings d-none d-lg-block">
-                <a class="nav-link" href="#">
-                  <i class="mdi mdi-view-grid"></i>
-                </a>
+              <a data-bs-toggle="modal" data-bs-target="#youtube"><button class="btn btn-block btn-danger"><i class="mdi mdi-youtube"></i>Video Tutorial</button></a>
               </li>
               <li class="nav-item dropdown border-left">
                 <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -151,8 +149,16 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                   <div class="navbar-profile">
-                    <img class="img-xs rounded-circle" src="<?=__img('faces/face15.jpg');?>" alt="">
-                    <p class="mb-0 d-none d-sm-block navbar-profile-name"><?=__session('fullname');?></p>
+                    <!-- <img class="img-xs rounded-circle" src="<?=__img('faces/face15.jpg');?>" alt=""> -->
+
+                    <?php $user_data = $this->session->userdata('user_data'); echo '<img src="'.$user_data['picture'].'" class="img-xs rounded-circle" />'?>
+
+                    <p class="mb-0 d-none d-sm-block navbar-profile-name">
+                    <?php 
+                 $user_data = $this->session->userdata('user_data');
+                 echo $user_data['name'];
+                 ?>    
+                  </p>
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
                 </a>
@@ -190,3 +196,13 @@
             </button>
           </div>
         </nav>
+
+<div class="modal fade" id="youtube" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-md" role="document" style="margin-top:-1rem;">
+        <div class="modal-content">
+            <div class="modal-body">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/J-n6nm14jWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>

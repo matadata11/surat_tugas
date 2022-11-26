@@ -8,6 +8,7 @@ class M_st extends CI_Model {
     // Mengambil data dari database
     public function get_surat()
     {
+        // $this->db->where('admin_surat',$this->session->userdata('user_data'));
         $this->db->select('*');
 		$this->db->join('mt_pegawai', 'mt_pegawai.nip = dt_surat.nip');
 		// $this->db->join('mt_instansi', 'mt_instansi.instansi = mt_gtk.instansi');

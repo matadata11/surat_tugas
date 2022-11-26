@@ -46,7 +46,7 @@
                                     <th>Nama Pegawai</th>
                                     <th>NIP/NoReg/NoSK</th>
                                     <th>Tanggal ST</th>
-                                    <!-- <th>Keterangan Tugas</th> -->
+                                    <th>Sampai</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -58,6 +58,7 @@
                                     <td><a href="#" data-bs-toggle="modal" data-bs-target="#lihat<?=$row['id_surat'];?>" style="text-decoration: none;"><?=$row['nm_pegawai']?></a></td>
                                     <td><?=$row['nip']?></td>
                                     <td><?=indo_date($row['tanggal'])?></td>
+                                    <td><?=indo_date($row['sampai'])?></td>
                                     <!-- <td style="word-wrap: break-word;"><?=$row['keterangan']?></td> -->
                                     
                                     <td>
@@ -96,7 +97,7 @@
                         <div class="col-md-12 col-12">
                             <div class="form-group">
                                 <label for="email-id-column" class="mb-2">NIP <small><font color="red">*</font></small></label>
-                                <input type="hidden" id="email-id-column" class="form-control" name="admin_surat" value="<?=__session('fullname');?>" required/>
+                                <input type="hidden" id="email-id-column" class="form-control" name="admin_surat" value="<?php $user_data = $this->session->userdata('user_data'); echo $user_data['name'];?>" required/>
                                 <input type="text" id="nip" class="form-control" name="nip" placeholder="ex. 19962020 *********" required autocomplete="off"/>
                             </div>
 
@@ -108,6 +109,11 @@
                             <div class="form-group">
                                 <label for="tanggal">Tanggal ST <small><font color="red">*</font></small></label>
                                 <input type="date" name="tanggal" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tanggal">Sampai Tanggal <small><font color="red">*</font></small></label>
+                                <input type="date" name="sampai" class="form-control" required>
                             </div>
 
                             <div class="form-group">

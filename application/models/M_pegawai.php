@@ -8,8 +8,18 @@ class M_pegawai extends CI_Model {
     // Mengambil data dari database
     public function getPegawai()
     {
-        $this->db->order_by('id_pegawai', 'ASC');
+    if(!isset($login_button))
+    {
+
+        $user_data = $this->session->userdata('user_data');
+        $this->db->where('admin_peg', $this->session->userdata('user_data')['name']);
+        $this->db->order_by('id_pegawai', 'DESC');
         return $this->db->get($this->_table)->result_array();
+        }
+        else
+        {
+        // echo '<div align="center">'.$login_button . '</div>';
+        }
     }
 
      // Insert data ke database

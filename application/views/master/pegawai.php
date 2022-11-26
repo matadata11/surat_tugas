@@ -43,7 +43,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Admin</th>
+                                    <!-- <th>Admin</th> -->
                                     <th>Nama Pegawai</th>
                                     <th>NIP</th>
                                     <th>Jabatan</th>
@@ -53,10 +53,11 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                
                             <?php $no=1; foreach($pegawai as $row): ?>
                                 <tr>
                                     <td><?=$no++;?></td>
-                                    <td><?=$row['admin_peg']?></td>
+                                    <!-- <td><?=$row['admin_peg']?></td> -->
                                     <td><?=$row['nm_pegawai']?></td>
                                     <td><?=$row['nip']?></td>
                                     <td><?=$row['jabatan']?></td>
@@ -99,7 +100,7 @@
                         <div class="col-md-12 col-12">
                             <div class="form-group">
                                 <label for="email-id-column" class="mb-2">Nama Pegawai <small><font color="red">*</font></small></label>
-                                <input type="hidden" id="email-id-column" class="form-control" name="admin_peg" value="<?=__session('fullname');?>" required/>
+                                <input type="hidden" id="email-id-column" class="form-control" name="admin_peg" value="<?php $user_data = $this->session->userdata('user_data'); echo $user_data['name'];?>" required/>
                                 <input type="text" id="email-id-column" class="form-control" name="nm_pegawai" placeholder="ex. Anonim" required autocomplete="off"/>
                             </div>
 
@@ -159,7 +160,7 @@
                         <div class="col-md-12 col-12">
                             <div class="form-group">
                                 <label for="email-id-column" class="mb-2">Nama Pegawai <small><font color="red">*</font></small></label>
-                                <input type="hidden" id="email-id-column" class="form-control" name="admin_peg" value="<?=__session('fullname');?>" required/>
+                                <input type="hidden" id="email-id-column" class="form-control" name="admin_peg" value="<?php $user_data = $this->session->userdata('user_data'); echo $user_data['name'];?>" required/>
                                 <input type="hidden" id="email-id-column" class="form-control" name="id_pegawai" value="<?=$row['id_pegawai'];?>" required autocomplete="off"/>
 
                                 <input type="text" id="email-id-column" class="form-control" name="nm_pegawai" value="<?=$row['nm_pegawai'];?>" required autocomplete="off"/>
@@ -252,7 +253,7 @@
                         <div class="col-md-12 col-12">
                             <div class="form-group">
                                 <label for="email-id-column">File Import <small><font color="red">*</font> File Excel</small></label>
-                                <input type="hidden" id="email-id-column" class="form-control" name="admin_peg" value="<?=__session('fullname');?>" placeholder="ex. 201501015"/>
+                                <input type="hidden" id="email-id-column" class="form-control" name="admin_peg" value="<?php $user_data = $this->session->userdata('user_data'); echo $user_data['name'];?>" placeholder="ex. 201501015"/>
                                 <input type="file" id="email-id-column" class="form-control" name="dataexcel" placeholder="Data excel"/>
                             </div>
                         </div>

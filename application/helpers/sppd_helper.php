@@ -1,9 +1,17 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-function checkakun()
+// function checkakun()
+// {
+// 	$CI =& get_instance();
+//     if(!$CI->session->userdata('login') == 'OK'){
+//         redirect('/');
+//     }
+// }
+
+function checkakungoogle()
 {
 	$CI =& get_instance();
-    if(!$CI->session->userdata('login') == 'OK'){
+    if(!$CI->session->userdata('access_token')){
         redirect('/');
     }
 }

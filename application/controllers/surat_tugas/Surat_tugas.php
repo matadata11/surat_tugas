@@ -29,6 +29,7 @@ class Surat_tugas extends Admin_Controller {
 		$this->form_validation->set_rules('nip', 'NIP', 'required');
 		$this->form_validation->set_rules('nm_pegawai', 'Nama Pegawai', 'required');
 		$this->form_validation->set_rules('tanggal', 'Tanggal ST', 'required');
+		$this->form_validation->set_rules('sampai', 'Tanggal ST', 'required');
 		$this->form_validation->set_rules('keterangan', 'Keterangan Perjalanan Dinas', 'required');
 		
 
@@ -38,6 +39,7 @@ class Surat_tugas extends Admin_Controller {
 				$nip 		        = $this->input->post('nip', TRUE);
 				$nm_pegawai 	    = $this->input->post('nm_pegawai', TRUE);
 				$tanggal 	        = $this->input->post('tanggal', TRUE);
+				$sampai 	        = $this->input->post('sampai', TRUE);
 				$keterangan 	    = $this->input->post('keterangan', TRUE);
 
 				$data = [
@@ -45,6 +47,7 @@ class Surat_tugas extends Admin_Controller {
 					'nip'		        => $nip,
 					'nm_pegawai'		=> $nm_pegawai,
 					'tanggal'		    => $tanggal,
+					'sampai'		    => $sampai,
 					'keterangan'		=> $keterangan,
 					'created_at'	    => date('Y-m-d')
 				];
@@ -65,17 +68,17 @@ class Surat_tugas extends Admin_Controller {
 
     public function updated()
 	{
-		$this->form_validation->set_rules('anggota1', 'anggota1', 'required');
-		$this->form_validation->set_rules('nip1', 'nip1', 'required');
+		// $this->form_validation->set_rules('anggota1', 'anggota1', 'required');
+		// $this->form_validation->set_rules('nip1', 'nip1', 'required');
 
-        $this->form_validation->set_rules('anggota2', 'anggota2', 'required');
-		$this->form_validation->set_rules('nip2', 'nip2', 'required');
+        // $this->form_validation->set_rules('anggota2', 'anggota2', 'required');
+		// $this->form_validation->set_rules('nip2', 'nip2', 'required');
 
-        $this->form_validation->set_rules('anggota3', 'anggota3', 'required');
-		$this->form_validation->set_rules('nip3', 'nip3', 'required');
+        // $this->form_validation->set_rules('anggota3', 'anggota3', 'required');
+		// $this->form_validation->set_rules('nip3', 'nip3', 'required');
 		
 
-		if ($this->form_validation->run() == TRUE) {
+		// if ($this->form_validation->run() == TRUE) {
 			if (isset($_POST['submit'])) {
 				$id_surat 	    = $this->input->post('id_surat', TRUE);
 				$anggota1 		= $this->input->post('anggota1', TRUE);
@@ -104,8 +107,9 @@ class Surat_tugas extends Admin_Controller {
 				$this->session->set_flashdata('nofalse', 'Data Gagal Diupdate.');
 			}
 			redirect($_SERVER['HTTP_REFERER']);
-		}
+		// }
 	}
+	
 
 	 // Hapus data jurusan
 	public function destroy()
