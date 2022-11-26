@@ -93,25 +93,22 @@
               </ul>
             </div>
           </li>
-          <!-- <li class="nav-item menu-items">
+           <li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
               <span class="menu-icon">
-                <i class="mdi mdi-crosshairs-gps"></i>
+                <i class="mdi mdi-file-cloud"></i>
               </span>
-              <span class="menu-title">Sidebar Layouts</span>
+              <span class="menu-title">Pelaporan</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="sidebar-layouts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/layout/compact-menu.html">Compact menu</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/layout/sidebar-collapsed.html">Icon menu</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/layout/sidebar-hidden.html">Sidebar Hidden</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/layout/sidebar-hidden-overlay.html">Sidebar Overlay</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/layout/sidebar-fixed.html">Sidebar Fixed</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/layout/compact-menu.html">Input Laporan</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/layout/sidebar-collapsed.html">Print Laporan</a></li>
               </ul>
             </div>
           </li>
-          <li class="nav-item menu-items">
+          <!--<li class="nav-item menu-items">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>

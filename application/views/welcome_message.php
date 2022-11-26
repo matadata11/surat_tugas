@@ -75,10 +75,17 @@
                 <br>
                 <img src="https://user-images.githubusercontent.com/9599/61177475-2ddce800-a58b-11e9-9bf6-aa4794a99f2a.png" alt="" style="margin-left:-10px;width:23rem;margin-top:-10px;">
               </div>
+              
+            </form>
+
+            <div class="tutor mb-4">
+                <a data-toggle="modal" data-target="#tutor" style="text-decoration:none;"><button class="btn btn-block btn-danger" >Cara Penggunaan</button></a>
+              </div>
+
               <div class="text-center">
               <p>Dikembangkan oleh <a href="https://notfound.id" class="mt-4" style="text-decoration:none;"><b>Notfound Indonesia</b></a></p>
               </div>
-            </form>
+
             </div>
           </div>
           
@@ -119,6 +126,16 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="tutor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-lg" role="document" style="margin-top:10px;">
+        <div class="modal-content">
+            <div class="modal-body">
+            <embed src="<?=site_url('assets/pdf/Langkah Penggunaan Sistem Pengajuan Perjalanan Dinas.pdf');?>" type="application/pdf" width="100%" height="700px"></embed>
             </div>
         </div>
     </div>

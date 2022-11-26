@@ -12,7 +12,7 @@
                         <p class="mb-0 font-weight-normal d-none d-sm-block">Sistem SPPD merupakan sistem pendataan Perjalanan Dinas pada Bidang Pembinaan Sekolah Mernengah Kejuruan. Silahkan ikuti cara penggunaaan sistem dengan menekan <b>tombol Get Started</b></p>
                     </div>
                     <div class="col-3 col-sm-2 col-xl-2 ps-0 text-center">
-                        <button class="btn btn-outline-light btn-rounded get-started-btn">Get Started</button>
+                        <a data-bs-toggle="modal" data-bs-target="#pdf"><button class="btn btn-outline-light btn-rounded get-started-btn">Get Started</button></a>
                     </div>
                 </div>
             </div>
@@ -184,7 +184,7 @@
                                     <td> 02312 </td>
                                     <td> $14,500 </td>
                                     <td> Dashboard </td>
-                                    <td> Credit card </td>
+                                    <td> Credit card </td>outube
                                     <td> 04 Dec 2019 </td>
                                     <td>
                                     <div class="badge badge-outline-success">Approved</div>
@@ -194,6 +194,16 @@
                         </table>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="pdf" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-lg" role="document" style="margin-top:10px;">
+        <div class="modal-content">
+            <div class="modal-body">
+            <embed src="<?=site_url('assets/pdf/Langkah Penggunaan Sistem Pengajuan Perjalanan Dinas.pdf');?>" type="application/pdf" width="100%" height="700px"></embed>
             </div>
         </div>
     </div>

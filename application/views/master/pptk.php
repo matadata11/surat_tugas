@@ -46,7 +46,7 @@
                                     <th>NIP</th>
                                     <th>Jabatan</th>
                                     <th>Pangkat/Gol</th>
-                                    <!-- <th>Status</th> -->
+                                    <th>Anggaran</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -59,9 +59,9 @@
                                     <td><?=$row['nip']?></td>
                                     <td><?=$row['jabatan']?></td>
                                     <td><?=$row['pg']?></td>
-                                    <!-- <td>
-                                    <label class="badge badge-info"><?=$row['status']?></label>
-                                    </td> -->
+                                    <td>
+                                    <label class="badge badge-info">Rp. <?=number_format($row['anggaran'])?></label>
+                                    </td>
                                     <td>
                                     <a data-bs-toggle="modal" data-bs-target="#updated<?=$row['id_pptk'];?>"><button class="btn btn-outline-warning">Update</button></a>
 
@@ -106,6 +106,11 @@
                             <div class="form-group">
                                 <label for="nama_pegawai" class="mb-2"> Nama Pegawai <small><font color="red">*</font> </small></label>
                                 <input type="text" class="form-control" name="nm_pegawai" placeholder="ex. Anonim" required autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nama_pegawai" class="mb-2"> Anggaran <small><font color="red">*</font> </small></label>
+                                <input type="number" class="form-control" name="anggaran" placeholder="ex. 2*******" required autocomplete="off">
                             </div>
 
                         </div>
@@ -154,6 +159,11 @@
                             <div class="form-group">
                                 <label for="nama_pegawai" class="mb-2"> Nama Pegawai <small><font color="red">*</font> </small></label>
                                 <input type="text" class="form-control" name="nm_pegawai" value="<?=$row['nm_pegawai'];?>" required autocomplete="off">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="nama_pegawai" class="mb-2"> Anggaran <small><font color="red">*</font> </small></label>
+                                <input type="text" class="form-control" name="anggaran" value="<?=$row['anggaran'];?>" required autocomplete="off">
                             </div>
 
                         </div>

@@ -38,19 +38,22 @@ class Pptk extends Admin_Controller {
 		$this->form_validation->set_rules('admin_pptk', 'Admin Pegawai', 'required');
 		$this->form_validation->set_rules('nip', 'NIP', 'required');
 		$this->form_validation->set_rules('nm_pegawai', 'Nama Pegawai', 'required');
+		$this->form_validation->set_rules('anggaran', 'Anggaran', 'required');
 		
 
 		if ($this->form_validation->run() == TRUE) {
 			if (isset($_POST['submit'])) {
 				$admin_pptk 		= $this->input->post('admin_pptk', TRUE);
-				$nip 		    = $this->input->post('nip', TRUE);
-				$nm_pegawai 	= $this->input->post('nm_pegawai', TRUE);
+				$nip 		    	= $this->input->post('nip', TRUE);
+				$nm_pegawai 		= $this->input->post('nm_pegawai', TRUE);
+				$anggaran 			= $this->input->post('anggaran', TRUE);
 				
 
 				$data = [
-					'admin_pptk'		    => $admin_pptk,
+					'admin_pptk'		=> $admin_pptk,
 					'nip'		        => $nip,
 					'nm_pegawai'		=> $nm_pegawai,
+					'anggaran'			=> $anggaran,
 					'created_at'	    => date('Y-m-d')
 				];
 			}
@@ -69,19 +72,22 @@ class Pptk extends Admin_Controller {
 		$this->form_validation->set_rules('admin_pptk', 'Admin Pegawai', 'required');
 		$this->form_validation->set_rules('nip', 'NIP', 'required');
 		$this->form_validation->set_rules('nm_pegawai', 'Nama Pegawai', 'required');
-		
+		$this->form_validation->set_rules('anggaran', 'Anggaran', 'required');
+
 		if ($this->form_validation->run() == TRUE) {
 			if (isset($_POST['submit'])) {
-				$id_pptk 	= $this->input->post('id_pptk', TRUE);
+				$id_pptk 		= $this->input->post('id_pptk', TRUE);
 				$admin_pptk 	= $this->input->post('admin_pptk', TRUE);
 				$nip 		    = $this->input->post('nip', TRUE);
 				$nm_pegawai 	= $this->input->post('nm_pegawai', TRUE);
+				$anggaran 		= $this->input->post('anggaran', TRUE);
 
 				$data = [
 					'id_pptk'	    	=> $id_pptk,
 					'admin_pptk'		=> $admin_pptk,
 					'nip'		        => $nip,
 					'nm_pegawai'		=> $nm_pegawai,
+					'anggaran'			=> $anggaran,
 					'updated_at'	    => date('Y-m-d')
 				];
 			}
