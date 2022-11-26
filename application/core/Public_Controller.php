@@ -5,12 +5,14 @@ class Public_Controller extends MY_Controller {
 
     function __construct(){
         parent::__construct();
+        checkakungoogle();
+        // checkakun();
     }
 
-    public function index()
-    {
-        
-    }
+    public $vars = [
+		'navbar' 	=> 'backend/navbar',
+		'sidebar' 	=> 'backend/sidebar',
+	];
 
 }
 

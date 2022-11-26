@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pegawai extends Admin_Controller {
+class Pegawai extends Public_Controller {
 
     
     public function __construct()

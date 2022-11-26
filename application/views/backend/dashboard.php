@@ -159,16 +159,17 @@
                                     </label>
                                 </div>
                                 </th>
-                                <th> Client Name </th>
-                                <th> Order No </th>
-                                <th> Product Cost </th>
-                                <th> Project </th>
-                                <th> Payment Mode </th>
-                                <th> Start Date </th>
-                                <th> Payment Status </th>
+                                <th>#</th>
+                                <th> Nama Pemohon </th>
+                                <th> NIP/No Reg/No SK </th>
+                                <th> Tanggal Berangkat </th>
+                                <th> Tanggal Kembali </th>
+                                <th> Status </th>
                             </tr>
                             </thead>
                             <tbody>
+
+                            <?php $no=1; foreach($st as $row): ?>
                                 <tr>
                                     <td>
                                     <div class="form-check form-check-muted m-0">
@@ -177,19 +178,26 @@
                                         </label>
                                     </div>
                                     </td>
+                                    <td><?=$no++;?></td>
                                     <td>
-                                    <img src="<?=__img('faces/face1.jpg');?>" alt="image" />
-                                    <span class="ps-2">Henry Klein</span>
+                                    <!-- <img src="<?=__img('faces/face1.jpg');?>" alt="image" /> -->
+                                    <span class="ps-2"><?=$row['nm_pegawai'];?></span>
                                     </td>
-                                    <td> 02312 </td>
-                                    <td> $14,500 </td>
-                                    <td> Dashboard </td>
-                                    <td> Credit card </td>outube
-                                    <td> 04 Dec 2019 </td>
+                                    <td> <?=$row['nip'];?> </td>
+                                    <td> <?=indo_date($row['tanggal']);?> </td>
+                                    <td> <?=indo_date($row['sampai']);?> </td>
                                     <td>
-                                    <div class="badge badge-outline-success">Approved</div>
+                                    <?php if($row['status_surat'] == 'Menunggu'){
+                                        echo "<div class='badge badge-outline-warning'>Menunggu Verifikasi</div>";
+                                    }elseif($row['status_surat'] == 'Approved'){
+                                        echo "<div class='badge badge-outline-success'>Approved</div>";
+                                    }elseif($row['status_surat'] == 'Tolak' ){
+                                        echo "<div class='badge badge-outline-danger'>Permohonan Ditolak</div>";
+                                    }
+                                    ?>
                                     </td>
                                 </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

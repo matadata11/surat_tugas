@@ -1,24 +1,24 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['pptk']                          = 'master/Pptk';
+$route['pptk']                          = 'public/Pptk';
 
-$route['pegawai']                       = 'master/Pegawai';
-$route['add-pegawai']                   = 'master/Pegawai/store';
-$route['edit-pegawai']                  = 'master/Pegawai/updated';
-$route['remove-pegawai/(:num)']         = 'master/Pegawai/deleted';
-$route['import-inputan']                = 'master/Pegawai/import_excel';
+$route['pegawai']                       = 'public/Pegawai';
+$route['add-pegawai']                   = 'public/Pegawai/store';
+$route['edit-pegawai']                  = 'public/Pegawai/updated';
+$route['remove-pegawai/(:num)']         = 'public/Pegawai/deleted';
+$route['import-inputan']                = 'public/Pegawai/import_excel';
 
 // data pptk
-$route['add-pptk']                      = 'master/Pptk/store';
-$route['updated-pptk']                  = 'master/Pptk/updated';
-$route['remove-pptk/(:num)']            = 'master/Pptk/deleted';
+$route['add-pptk']                      = 'public/Pptk/store';
+$route['updated-pptk']                  = 'public/Pptk/updated';
+$route['remove-pptk/(:num)']            = 'public/Pptk/deleted';
 
 // surat_tugas
-$route['Surat']                         = 'surat_tugas/Surat_tugas';
-$route['add-surat']                     = 'surat_tugas/Surat_tugas/store';
-$route['edit-anggota']                  = 'surat_tugas/Surat_tugas/updated';
-$route['remove-surat/(:num)']     	    = 'surat_tugas/Surat_tugas/destroy';
+$route['Surat']                         = 'public/Surat_tugas';
+$route['add-surat']                     = 'public/Surat_tugas/store';
+$route['edit-anggota']                  = 'public/Surat_tugas/updated';
+$route['remove-surat/(:num)']     	    = 'public/Surat_tugas/destroy';
 $route['cetak-surat']                   = 'report/St';
 
 $route['Dashboard']                     = 'Dashboard';

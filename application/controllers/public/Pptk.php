@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pptk extends Admin_Controller {
+class Pptk extends Public_Controller {
 
     
     public function __construct()

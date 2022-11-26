@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Surat_tugas extends Admin_Controller {
+class Surat_tugas extends Public_Controller {
 
     
     public function __construct()
