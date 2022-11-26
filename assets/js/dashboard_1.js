@@ -63,9 +63,9 @@
       }
       if ($("#transaction-history").length) {
         var areaData = {
-          labels: ["Paypal", "Stripe","Cash"],
+          labels: ["Anggaran", "Tealisasi","Sisa"],
           datasets: [{
-              data: [55, 25, 20],
+              data: [100, 80, 20],
               backgroundColor: [
                 "#111111","#00d25b","#ffab00"
               ]
@@ -96,13 +96,13 @@
                 ctx = chart.chart.ctx;
         
             ctx.restore();
-            var fontSize = 1;
+            var fontSize = 0.70;
             ctx.font = fontSize + "rem sans-serif";
             ctx.textAlign = 'left';
             ctx.textBaseline = "middle";
             ctx.fillStyle = "#ffffff";
         
-            var text = "$1200", 
+            var text = "$12,386,201.77", 
                 textX = Math.round((width - ctx.measureText(text).width) / 2),
                 textY = height / 2.4;
         
@@ -116,7 +116,7 @@
             ctx.fillStyle = "#6c7293";
   
             var texts = "Total", 
-                textsX = Math.round((width - ctx.measureText(text).width) / 1.93),
+                textsX = Math.round((width - ctx.measureText(text).width) / 1.55),
                 textsY = height / 1.7;
         
             ctx.fillText(texts, textsX, textsY);

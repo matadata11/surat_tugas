@@ -19,7 +19,7 @@ class Pptk extends Public_Controller {
 
         $this->vars['title']    = 'Data PPTK';
         $this->vars['content']  = 'master/pptk';
-        $this->load->view('backend/main', $this->vars);
+        $this->load->view('public/main', $this->vars);
     }
 
     public function hasil()
@@ -29,7 +29,7 @@ class Pptk extends Public_Controller {
 
         $this->vars['title']    	= 'Verval Form Inputan';
         $this->vars['content']  	= 'master/cari_pegawai';
-        $this->load->view('backend/main', $this->vars);
+        $this->load->view('public/main', $this->vars);
     }
 
 

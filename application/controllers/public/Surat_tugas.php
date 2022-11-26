@@ -20,7 +20,7 @@ class Surat_tugas extends Public_Controller {
 
         $this->vars['title']    = 'Halaman Surat tugas';
         $this->vars['content']  = 'master_surat/surat_tugas';
-        $this->load->view('backend/main', $this->vars);
+        $this->load->view('public/main', $this->vars);
     }
 
     public function store()

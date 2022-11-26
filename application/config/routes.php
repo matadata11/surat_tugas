@@ -23,6 +23,15 @@ $route['cetak-surat']                   = 'report/St';
 
 $route['Dashboard']                     = 'Dashboard';
 
+
+// rule Admin Sistem
+
+$route['pegawai_a']                     = 'admin/PegawaiA';
+$route['add-pegawai_a']                 = 'admin/PegawaiA/store';
+$route['edit-pegawai_a']                = 'admin/PegawaiA/updated';
+$route['remove-pegawai_a/(:num)']       = 'admin/PegawaiA/deleted';
+
+$route['patch']                         = 'patch/Master_patch';
 $route['patch']                         = 'patch/Master_patch';
 $route['patching']                      = 'patch/Master_patch/patchsystem';
 $route['assets']                        = 'patch/Master_patch/patchassets';

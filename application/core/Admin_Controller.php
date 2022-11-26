@@ -11,8 +11,8 @@ class Admin_Controller extends MY_Controller {
     }
 
     public $vars = [
-		'navbar' 	=> 'backend/navbar',
-		'sidebar' 	=> 'backend/sidebar',
+		'navbar' 	=> 'backend/navbarA',
+		'sidebar' 	=> 'backend/sidebarA',
 	];
 
 }

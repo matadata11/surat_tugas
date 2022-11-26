@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="<?=__css('login/css/style.css');?>">
     <link rel="stylesheet" href="<?=__css('login/css/login.css');?>">
 
-    <title>Login Page</title>
+    <link rel="shortcut icon" href="<?=__img('isppd.png');?>" />
+
+    <title>.: Login Page | Sistem Pengajuan Perjalanan Dinas :.</title>
   </head>
   <body>
   
@@ -28,16 +30,18 @@
       <div class="row">
         <div class="col-md-6 text-center">
           <img src="<?=__img('undraw_remotely_2j6y.svg');?>" alt="Image" class="img-fluid">
-         
+         <div class="text-muted">
+          <h3>Sistem Pengajuan Perjalanan Dians</h3>
+         </div>
         </div>
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="mb-4">
               <h3>Sign In <small class="text-muted">(Single Sign On)</small></h3>
-              <p class="mb-4">silahkan login dengan Akun Google atau Github anda.</p>
+              <p class="mb-4">silahkan login dengan Akun Google atau Akun SPPD anda.</p>
             </div>
-            <form method="post" action="<?=site_url('checkdulu')?>">
+            
               <!-- <div class="form-group first mb-1">
                 <label for="email">Email</label>
                 <input type="email" name="email" class="form-control" id="email" autocomplete="off">
@@ -73,10 +77,9 @@
                 ?>
 
                 <br>
-                <img src="https://user-images.githubusercontent.com/9599/61177475-2ddce800-a58b-11e9-9bf6-aa4794a99f2a.png" alt="" style="margin-left:-10px;width:23rem;margin-top:-10px;">
+                <a data-toggle="modal" data-target="#reset" style="margin-left:0px;width:21.5rem;margin-top:10px;margin-bottom:2.5rem;"><img src="<?=__img('login.png');?>" alt="" style="width:21.5rem;"></a>
               </div>
               
-            </form>
 
             <div class="tutor mb-4">
                 <a data-toggle="modal" data-target="#tutor" style="text-decoration:none;"><button class="btn btn-block btn-danger" >Cara Penggunaan</button></a>
@@ -85,7 +88,7 @@
               <div class="text-center">
               <p>Dikembangkan oleh <a href="https://notfound.id" class="mt-4" style="text-decoration:none;"><b>Notfound Indonesia</b></a></p>
               </div>
-
+              <!-- <a data-toggle="modal" data-target="#reset" style="margin-left:0px;width:21.5rem;margin-top:10px;margin-bottom:2.5rem;"><img src="<?=__img('wa.png');?>" alt="" style="width:21.5rem;"></a> -->
             </div>
           </div>
           
@@ -101,24 +104,30 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalCenterTitle">
-				Reset Account Data
+				            Masuk dengan akun sppd anda.
                 </h5>
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" >
                     <i data-feather="x"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <form class="form">
+              <form method="post" action="<?=site_url('checkdulu')?>">
                     <div class="row">
                         <div class="col-md-12 col-12">
                             <div class="form-group">
                                 <label for="email-id-column" class="mb-2">Email <small><font color="red">*</font> Registered and active email</small></label>
-                                <input type="text" id="email-id-column" class="form-control" name="photo" placeholder="admin@admin.com"/>
+                                <input type="email" name="email" class="form-control" id="email" autocomplete="off">
                             </div>
+
+                            <div class="form-group">
+                                <label for="email-id-column" class="mb-2">Password </label>
+                                <input type="password" name="password" class="form-control" id="password" autocomplete="off">
+                            </div>
+
                         </div>
                         <div class="col-12 d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary me-1 mb-1 mr-1">
-                                Reset Akun
+                            <button type="submit" name="submit" class="btn btn-primary me-1 mb-1 mr-1">
+                                Masuk
                             </button>
                             <button type="reset" class="btn btn-secondary me-1 mb-1">
                                 Clear

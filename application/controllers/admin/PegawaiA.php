@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pegawai extends Public_Controller {
+class PegawaiA extends Admin_Controller {
 
     
     public function __construct()
@@ -18,7 +18,7 @@ class Pegawai extends Public_Controller {
 
         $this->vars['title']    = 'Data Pegawai';
         $this->vars['content']  = 'master/pegawai';
-        $this->load->view('public/main', $this->vars);
+        $this->load->view('backend/mainA', $this->vars);
     }
     
     public function store()

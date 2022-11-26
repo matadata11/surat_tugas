@@ -10,8 +10,8 @@ class Public_Controller extends MY_Controller {
     }
 
     public $vars = [
-		'navbar' 	=> 'backend/navbar',
-		'sidebar' 	=> 'backend/sidebar',
+		'navbar' 	=> 'public/navbar',
+		'sidebar' 	=> 'public/sidebar',
 	];
 
 }

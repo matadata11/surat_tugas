@@ -1,9 +1,8 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends Public_Controller {
+class DashboardA extends Admin_Controller {
 
-    
     public function __construct()
     {
         parent::__construct();
@@ -17,10 +16,10 @@ class Dashboard extends Public_Controller {
         $this->vars['st'] 		= $this->surat_tugas->get_surat();
 
         $this->vars['title']    = 'Dashboard';
-        $this->vars['content']  = 'public/dashboard';
-        $this->load->view('public/main', $this->vars);
+        $this->vars['content']  = 'backend/dashboardA';
+        $this->load->view('backend/mainA', $this->vars);
     }
 
 }
 
-/* End of file Dashboard.php */
+/* End of file DashboardA.php */
