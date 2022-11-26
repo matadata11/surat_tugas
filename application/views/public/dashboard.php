@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <h6 class="text-muted font-weight-normal">Rp. 2.000.000.000</h6>
+                <h6 class="text-muted font-weight-normal">Rp. 200.000.000.000</h6>
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <h6 class="text-muted font-weight-normal">Rp. 20.000.000</h6>
+                <h6 class="text-muted font-weight-normal">Rp. 200.000.000</h6>
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@
                 <div class="row">
                     <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                            <h3 class="mb-0">$12.34</h3>
+                            <h3 class="mb-0">Sisa</h3>
                             <p class="text-danger ms-2 mb-0 font-weight-medium">-2.4%</p>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <h6 class="text-muted font-weight-normal">Daily Income</h6>
+                <h6 class="text-muted font-weight-normal">dalam %</h6>
             </div>
         </div>
     </div>

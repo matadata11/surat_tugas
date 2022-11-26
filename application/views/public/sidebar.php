@@ -103,7 +103,7 @@
             </a>
             <div class="collapse" id="sidebar-layouts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/layout/compact-menu.html">Input Laporan</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?=site_url('laporan');?>">Input Laporan</a></li>
                 <li class="nav-item"> <a class="nav-link" href="../../pages/layout/sidebar-collapsed.html">Print Laporan</a></li>
               </ul>
             </div>

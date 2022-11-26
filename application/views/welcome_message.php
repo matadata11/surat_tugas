@@ -31,7 +31,7 @@
         <div class="col-md-6 text-center">
           <img src="<?=__img('undraw_remotely_2j6y.svg');?>" alt="Image" class="img-fluid">
          <div class="text-muted">
-          <h3>Sistem Pengajuan Perjalanan Dians</h3>
+          <p>Sistem Pengajuan/Pelaporan Perjalanan Dinas</p>
          </div>
         </div>
         <div class="col-md-6 contents">

@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+$route['laporan']                       = 'public/Laporan';
+
 $route['pptk']                          = 'public/Pptk';
 
 $route['pegawai']                       = 'public/Pegawai';
