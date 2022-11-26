@@ -31,11 +31,11 @@
 
 <div class="card">
     <div class="card-header mb-2">
-        <a data-bs-toggle="modal" data-bs-target="#add"> <button type="button" class="btn btn-inverse-primary btn-fw">Input Laporan</button></a>
+        <a data-bs-toggle="modal" data-bs-target="#input"> <button type="button" class="btn btn-inverse-primary btn-fw">Input Laporan</button></a>
         <a data-bs-toggle="modal" data-bs-target="#import"> <button type="button" class="btn btn-inverse-success btn-fw">Import</button></a>
     </div>
         <div class="card-body">
-            <h4 class="card-title">data Pegawai</h4>
+            <h4 class="card-title">Laporan Perjalanan Dinas</h4>
             <div class="row">
                 <div class="col-12">
                     <div class="table-responsive">
@@ -74,6 +74,65 @@
                         </table>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal add -->
+<div class="modal fade" id="input" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="margin-top:-3rem;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable modal-md" role="document">
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">
+				Tambah Data Pegawai
+                </h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" >
+                    <i data-feather="x"></i>
+                </button>
+            </div> -->
+            <div class="modal-body">
+                <form class="form" method="post" action="<?=site_url('add-pegawai')?>">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <div class="form-group">
+                                <label for="email-id-column" class="mb-2">Nama Pegawai <small><font color="red">*</font></small></label>
+                                <input type="hidden" id="email-id-column" class="form-control" name="admin_peg" value="<?php $user_data = $this->session->userdata('user_data'); echo $user_data['name'];?>" required/>
+                                <input type="text" id="email-id-column" class="form-control" name="nm_pegawai" placeholder="ex. Anonim" required autocomplete="off"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email-id-column" class="mb-2">NIP/No Reg/No SK <small><font color="red">*</font></small></label>
+                                <input type="text" id="email-id-column" class="form-control" name="nip" placeholder="ex. 198193 *******" required autocomplete="off"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email-id-column" class="mb-2">Jabatan <small><font color="red">*</font></small></label>
+                                <input type="text" id="email-id-column" class="form-control" name="jabatan" placeholder="ex. Anonim" required autocomplete="off"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email-id-column" class="mb-2">Pangkat / Gol <small><font color="red">*</font></small></label>
+                                <input type="text" id="email-id-column" class="form-control" name="pg" placeholder="ex. 198193 *******" required autocomplete="off"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label  class="mb-2">Status ASN <small><font color="red">*</font></small></label>
+                                <div id="bloodhound">
+                                <input name="status" class="typeahead" type="text" placeholder="3 Karakter" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-end">
+                            <button type="submit" name="submit" class="btn btn-primary me-1 mb-1 mr-1">
+                                Submit
+                            </button>
+                            <button type="reset" class="btn btn-secondary me-1 mb-1">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
