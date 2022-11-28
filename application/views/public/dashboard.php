@@ -82,7 +82,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-4 grid-margin stretch-card">
+    <!-- <div class="col-md-4 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Chart Realisasi Perjalanan Dinas</h4>
@@ -107,9 +107,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-8 grid-margin stretch-card">
-        <div class="card">
+    </div> -->
+    <!-- <div class="col-md-8 grid-margin stretch-card"> -->
+        <!-- <div class="card">
             <div class="card-body">
                 <div class="d-flex flex-row justify-content-between">
                     <h4 class="card-title mb-1">Permohonan Surat Tugas</h4>
@@ -141,9 +141,9 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div> -->
        
-    <div class="row ">
+    <!-- <div class="row "> -->
         <div class="col-12 grid-margin">
             <div class="card">
                 <div class="card-body">
@@ -152,13 +152,6 @@
                         <table id="order-listing" class="table">
                             <thead>
                             <tr>
-                                <th>
-                                <div class="form-check form-check-muted m-0">
-                                    <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input">
-                                    </label>
-                                </div>
-                                </th>
                                 <th>#</th>
                                 <th> Nama Pemohon </th>
                                 <th> NIP/No Reg/No SK </th>
@@ -171,13 +164,6 @@
 
                             <?php $no=1; foreach($st as $row): ?>
                                 <tr>
-                                    <td>
-                                    <div class="form-check form-check-muted m-0">
-                                        <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input">
-                                        </label>
-                                    </div>
-                                    </td>
                                     <td><?=$no++;?></td>
                                     <td>
                                     <!-- <img src="<?=__img('faces/face1.jpg');?>" alt="image" /> -->
